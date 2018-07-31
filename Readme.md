@@ -17,30 +17,30 @@ likely to be of use:
 
 These can be invoked with the following command line commands from the root directory of the project:
 
-  $ gradle build
+>  $ gradle build
 
 This will build class files and leave them in the build directory.
 
-  $ gradle run
+>  $ gradle run
 
 This will run the main entry with no arguments. not very interesting at the moment.
 
-  $ gradle test
+>  $ gradle test
 
 This is probably the most useful. This will run all the unit tests and report on errors if any.
 
-  $ gradle jar
+>  $ gradle jar
 
 This will create a jar. This is useful if you want to pass arguments to the main and see a visual
 histogram. Here is an example of use and the output location of the jarfile:
 
-  $java -jar build/libs/JavaPractice-0.1.jar aManAPlanACanalPanama
-  p: **
-  a: **********
-  c: *
-  l: **
-  m: **
-  n: ****
+>  $java -jar build/libs/JavaPractice-0.1.jar aManAPlanACanalPanama
+>  p: **
+>  a: **********
+>  c: *
+>  l: **
+>  m: **
+>  n: ****
 
 ## Possible issues ##
 
