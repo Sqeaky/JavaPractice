@@ -3,7 +3,7 @@ import org.junit.jupiter.api.DisplayName;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-@DisplayName("Test Boilerplate that can be copied")
+@DisplayName("")
 public class SampleTests {
 
     @Test

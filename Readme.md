@@ -7,17 +7,40 @@ This is intended to practice and maybe show off some Java skills. There is simpl
 ## Building and Usage ##
 This should be simple to use for people familiar with gradle. I built this with gradle-4.9.
 
-Other than gradle, all needed dependencies are described in the file "build.gradle". There are three build targets that are likely to be of use:
+Other than gradle, all needed dependencies are described in the file "build.gradle". There are build targets that are
+likely to be of use:
 
   * build
   * run
   * test
+  * jar
 
 These can be invoked with the following command line commands from the root directory of the project:
 
   $ gradle build
+
+This will build class files and leave them in the build directory.
+
   $ gradle run
+
+This will run the main entry with no arguments. not very interesting at the moment.
+
   $ gradle test
+
+This is probably the most useful. This will run all the unit tests and report on errors if any.
+
+  $ gradle jar
+
+This will create a jar. This is useful if you want to pass arguments to the main and see a visual
+histogram. Here is an example of use and the output location of the jarfile:
+
+  $java -jar build/libs/JavaPractice-0.1.jar aManAPlanACanalPanama
+  p: **
+  a: **********
+  c: *
+  l: **
+  m: **
+  n: ****
 
 ## Possible issues ##
 
