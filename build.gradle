@@ -1,0 +1,49 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+mainClassName = 'com.sqeaky.practice.JavaPractice' // Why not use my git username
+
+group 'OnMyOwn'
+version '0.1'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    //compile()
+    testCompileOnly(
+        'junit:junit:4.12'
+        //'org.junit.jupiter:junit-jupiter-api:5.2.0'
+    )
+    testImplementation(
+        'org.junit.jupiter:junit-jupiter-api:5.2.0'
+    )
+    testRuntimeOnly(
+        'org.junit.jupiter:junit-jupiter-engine:5.2.0',
+        'org.junit.vintage:junit-vintage-engine:5.2.0'
+    )
+}
+
+test {
+    useJUnitPlatform()
+}
+
+sourceSets {
+    main {
+        java {
+            srcDir 'src/main/java'
+        }
+    }
+}
+
+jar {
+    manifest {
+        attributes(
+            'Class-Path': configurations.compile.collect { it.getName() }.join(' '),
+            'Main-Class': mainClassName
+        )
+    }
+}
