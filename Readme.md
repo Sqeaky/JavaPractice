@@ -29,3 +29,8 @@ This can be corrected with the script tools/FixCerts.sh. This can manifest with 
 
 If you are having trouble finding gradle 4.9 for ubuntu you might consider the gradle PPA:
 https://launchpad.net/~cwchien/+archive/ubuntu/gradle
+
+## License ##
+
+This project is released under the BSD 3 clause license and can be used for any purposed under as described in the file
+License.md.
